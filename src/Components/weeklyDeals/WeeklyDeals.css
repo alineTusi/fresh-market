@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  .weeklyDealsContainer{
+    margin: 5% 13%;
+    border-bottom: 1px solid black;
+  }
+  
+  .title{
+    text-align: center;
+  }
+  .weeklyDealsContainer p{
+    text-align: center;
+  }
+
+  .weeklyDealsItems{
+    display: flex;
+    justify-content: space-evenly;
+
+   }
+   
+   .item img{
+    width: 210px;
+    height: 210px;
+    object-fit: contain;
+    margin-bottom: 5%;
+    
+   }
+   .imgContainer{
+    width: 240px;
+    height: 240px;
+    margin-bottom: 5%;
+    background-color: white;
+    margin-right: 10px;
+    margin-left: 10px;
+   }
+
+   .valueContainer{
+    display: flex;
+    flex-direction: row;
+   }
+
+   

@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.deliveryContainer{
+  display: flex;
+  text-align: center;
+  justify-content: space-evenly;
+  padding: 5%;
+}
+
+.infoDelivery{
+  padding: 2% 4%;
+}
+
+.infoDelivery:nth-child(2){
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+.infoDelivery h3{
+  color: darkgreen;
+}

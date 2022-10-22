@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+ .carousel-caption{
+    left: 10%;
+    padding-top: 10.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    height: 100%;
+    color: darkgreen;
+  }
+  
+  .carousel-caption h1{
+    color: darkgreen;
+  } 
+
+  .btnShop{
+    background-color: green;
+    color: white;
+    
+  }
+
+  .bgSlides img{
+    height: 500px;
+    width: 100%;
+    object-fit: cover;
+  }
