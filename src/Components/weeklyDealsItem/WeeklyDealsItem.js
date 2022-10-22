@@ -4,14 +4,20 @@ import "../counter/CounterItem";
 
 const WeeklyDealsItem = ({ item }) => {
   const [value, setValue] = useState(0);
-  const [discount, setDiscount] = useState(item.discount || 0);
+  const [discount, setDiscount] = useState(item.discount);
   const [discountValue, setDiscountValue] = useState(0);
 
+  const formatter = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+  });
+
   useEffect(() => {
-    console.log('discount', discount)
-    console.log('item.value', item.value)
+    console.log('discount', discount, 'item.value', item.value)
     if (item.discount > 0) {
-      setDiscountValue((item.value * discount ));
+      const discountValue1 = (item.value * (1 - item.discount / 100) );
+      console.log('discountValue1', discountValue1)
+      setDiscountValue(discountValue1);
       // setDiscountValue(item.value - discount);
     }
   }, [discount]);
@@ -34,8 +40,9 @@ const WeeklyDealsItem = ({ item }) => {
           </div>
           <p className="itemName">{item.name}</p>
           <div className="valueContainer">
-            <p>{item.value}</p>
-                {discountValue > 0 && <p>{discountValue}</p>}
+            <p className={item.discount > 0 ? 'oldValue' : 'value'}>{formatter.format(item.value)}</p>
+            <pre> </pre>
+                {discountValue > 0 && <p>{formatter.format(discountValue)}</p>}
           </div>
           <div className="fields">
             <button className="btnItem" onClick={() => handleDecrease(value)}>
