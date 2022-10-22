@@ -8,6 +8,11 @@
     margin: 5% 13%;
     border-bottom: 1px solid black;
   }
+
+  .weeklyDealsSwiperContainer {
+    display: flex;
+    flex-direction: row;
+  }
   
   .title{
     text-align: center;
@@ -42,5 +47,10 @@
     display: flex;
     flex-direction: row;
    }
+
+   /* .weeklyContainer{
+    padding-left: 10%;
+    padding-right: 10%;
+   } */
 
    
