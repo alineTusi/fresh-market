@@ -4,7 +4,7 @@ import "./GrabAndGo.css";
 import Container from 'react-bootstrap/Container'
 
 const Grab = () => {
-  const [items, setItems] = useState([{}, {}]);
+  const [items, setItems] = useState([]);
   useEffect(() => {
     console.log(items);
   }, [items]);

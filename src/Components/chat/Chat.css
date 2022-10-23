@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.chatBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  height: 70px;
+  width: 70px;
+  background-color: #296049;
+  font-size: xx-large;
+
+}
+
+.chatWindow {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  height: 650px;
+  width: 400px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 5px 5px 5px #d0cece;
+  z-index:2
+}
+
+.chatWindowHeaderContainer {
+  height: 100px;
+  width: 100%;
+  background-color: #296049;
+}
+
+.chatWindowHeader {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+.chatWindowTitleContainer {
+  height: 100%;
+  width: 100%;
+}
+
+
+.chatWindowClose {
+  height: 100%;
+  width: 70px;
+  display: flex;
+  justify-content: center;
+
+}
+
+.chatWindowCloseBtn {
+  border: none;
+  height: 100%;
+  width: 100%;
+  font-size: x-large;
+  background-color: #296049;
+  color: white;
+}
+
+.chatWindowTitle {
+  color: white;
+  margin-left: 1em;
+  margin-top: 1em;
+}
+
+ul {
+  list-style: none;
+  color: white;
+}
+
+.chatWindowList::before {
+  content: "\2022";
+  color: #43B72A;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+
+}
+
+.chatWindowBody {
+  height: 100%;
+  width: 100%;
+}
+
+.chatWindowInputContainer {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+
+.chatWindowInput {
+  background-color: aquamarine;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.chatWindowAction {
+  background-color: #645c2c;
+  height: 100px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+}

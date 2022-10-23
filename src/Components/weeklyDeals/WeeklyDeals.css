@@ -34,18 +34,14 @@
     margin-bottom: 5%;
     
    }
+  
    .imgContainer{
     width: 240px;
-    height: 240px;
+    /* height: 240px; */
     margin-bottom: 5%;
-    background-color: white;
+    /* background-color: white; */
     margin-right: 10px;
     margin-left: 10px;
-   }
-
-   .valueContainer{
-    display: flex;
-    flex-direction: row;
    }
 
    /* .weeklyContainer{

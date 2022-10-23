@@ -1,69 +1,70 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-  .item {
-    width: 150px;
-    flex-wrap: wrap;
-    padding-bottom: 10%;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .fields {
-    border: 1px solid black;
-    width: 100%;
-    height: 40px;
-    margin: 5%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
+.item {
+  width: 150px;
+  flex-wrap: wrap;
+  padding-bottom: 10%;
+  display: flex;
+  justify-content: center;
+}
 
-  }
-
-
-   .btnItem{
-    border: 0;
-    background-color: transparent;
-    padding-right: 10px;
-    padding-left: 10px;
-   }
-
-
-  .inputField{
-    text-align: center;
-    border: 0;
-    background-color: transparent;
-    display: flex;
-    width: 40px;
-   
-  }
-
-  .btnCart{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 40px;
-    margin: 5%;
-    background-color: white;
-    
-    
-  }
-  .sale{
-    justify-content: flex-start;
-    display: flex;
-    background: green;
-    color: white;
-    width: 70%;
-    justify-content: center;
+.fields {
+  border: 1px solid black;
+  width: 100%;
+  height: 40px;
+  margin: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
 
 }
 
-.itemName::after{
+
+.btnItem {
+  border: 0;
+  background-color: transparent;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+
+.inputField {
+  text-align: center;
+  border: 0;
+  background-color: transparent;
+  display: flex;
+  width: 40px;
+
+}
+
+.btnCart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  margin: 5%;
+  background-color: white;
+
+
+}
+
+.sale {
+  justify-content: flex-start;
+  position: absolute;
+  display: flex;
+  background: green;
+  color: white;
+  width: 120px;
+  justify-content: center;
+}
+
+/* .itemName::after{
   content: '';
   display: flex;
   width: 25px;
@@ -71,19 +72,30 @@
   margin: 30px auto;
   background-color: black;
   justify-content: center;
+} */
+
+.itemName {
+  width: 100%;
+  height: 10px;
 }
 
-.itemName{
+.itemNameDividor {
   width: 100%;
+  height: 15px;
 }
-  
-  @media (max-width: 568px) {
-    .fields {
-      display: flex;
-      flex-direction: column;
-    }
+
+.valueContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+@media (max-width: 568px) {
+  .fields {
+    display: flex;
+    flex-direction: column;
   }
-  
-.oldValue{
+}
+
+.oldValue {
   text-decoration: line-through;
 }
