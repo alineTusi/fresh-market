@@ -9,10 +9,10 @@
     border-bottom: 1px solid black;
   }
 
-  .weeklyDealsSwiperContainer {
+  /* .weeklyDealsSwiperContainer {
     display: flex;
     flex-direction: row;
-  }
+  } */
   
   .title{
     text-align: center;
@@ -36,10 +36,7 @@
    }
   
    .imgContainer{
-    width: 240px;
-    /* height: 240px; */
     margin-bottom: 5%;
-    /* background-color: white; */
     margin-right: 10px;
     margin-left: 10px;
    }

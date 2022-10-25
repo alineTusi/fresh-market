@@ -4,6 +4,7 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { faCommentDots, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import InputEmoji from "react-input-emoji";
+import sendIcon from "./sendIcon.png";
 
 library.add(faCommentDots, faXmark);
 
@@ -46,7 +47,7 @@ const Chat = () => {
               <div className="chatWindowTitleContainer">
                 <h2 className="chatWindowTitle">Fresh Market</h2>
 
-                <ul>
+                <ul className="chatWindowLisContainer">
                   <li className="chatWindowList">
                     We’ll reply as soon as we can
                   </li>
@@ -78,7 +79,7 @@ const Chat = () => {
               />
             </div>
             <div className="chatWindowAction">
-              <button onClick={() => handleSendMessage(text)}>enter</button>
+              <button onClick={() => handleSendMessage(text)}><img src={sendIcon} alt="send icon" width="60%" /></button>
             </div>
           </div>
         </div>

@@ -5,11 +5,12 @@
 }
 
 .item {
-  width: 150px;
+  width: 240px;
   flex-wrap: wrap;
   padding-bottom: 10%;
   display: flex;
   justify-content: center;
+  padding-left: 20px;
 }
 
 .fields {
