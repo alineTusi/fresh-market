@@ -3,7 +3,7 @@ import basket from './basket.png';
 import search from './search.png'
 import userIcon from './userIcon.png';
 import cart from './cart.png';
-import BackgroundCarousel from '../carousel/Carousel';
+import { NavLink } from "react-router-dom";
 
 import './Header.css';
 import '../carousel/Carousel.css'
@@ -15,10 +15,10 @@ const Header = () => {
                 <img className="logo" src={basket} alt="logo"></img>
                 <h1>Fresh Market</h1>
                 <ul>
-                    <li className="active">Home</li>
-                    <li>Shop</li>
-                    <li>About</li>
-                    <li>Contact</li>
+                    <NavLink  className="active" to={"/"}>Home</NavLink>
+                    <NavLink to={"shop"} >Shop</NavLink>
+                    <NavLink to={"about"} >About</NavLink>
+                    <NavLink >Contact</NavLink>
                 </ul>
                 <input className="inputSearch" placeholder="Search..."/>
                 <img className="searchIcon" src={search} alt="search Icon" ></img>
@@ -27,7 +27,7 @@ const Header = () => {
                 
                 <img className="cart" src={cart} alt="cart Icon"></img>
             </nav>
-            <BackgroundCarousel/>
+            
         </div>
     )
 }

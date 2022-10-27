@@ -1,0 +1,83 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.shopContainer{
+  background-color: white;
+  padding: 5% 5%;
+  width: 100%;
+}
+
+.shopweeklyDealsItems{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.shopweeklyDealsItems img{
+  background-color: white;
+}
+
+.shopCollectionContainer{
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  border-bottom: 1px solid lightgrey;
+  border-top: 1px solid lightgrey;
+}
+
+.shopContainerItems{
+  display: flex;
+}
+
+.shopTitle{
+  text-align: center;
+}
+
+.shopParagraph{
+  text-align: center;
+  padding-bottom: 5%;
+}
+
+.shopFilterTitle{
+  padding-bottom: 30px;
+  text-align: left;
+}
+.shopCollectionBtn{
+  border: none;
+  background-color: white;
+  text-align: left;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.shopUlCollection{
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+ }
+.shopCollectionList{
+  text-decoration: none;
+  color: black;
+
+}
+ .shopPriceBtn{
+  border: none;
+  background-color: white;
+  text-align: left;
+  padding-top: 20px;
+  padding-bottom: 20px;
+ }
+
+ .shopUlCollectionContainer{
+  width: 200px;
+  border-bottom: 1px solid lightgrey;
+ }
+
+ .shopSortByDropDown{
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  
+ }

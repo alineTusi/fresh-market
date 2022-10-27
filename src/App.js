@@ -1,16 +1,17 @@
 import React from 'react';
 import './App.css';
-import Counter from './Components/counter/Counter';
 import Header from './Components/header/Header';
-import Main from './Components/main/Main';
-import WeeklyDeals from './Components/weeklyDeals/WeeklyDeals';
+import Footer from "./Components/footer/Footer";
+import Chat from "./Components/chat/Chat";
+import Pages from './Pages/Pages';
 
 const App = () => {
   return (
     <>
     <Header />
-    <Main />
-
+    <Pages />
+    <Footer />
+    <Chat />
     </>
   );
 }
