@@ -32,6 +32,10 @@
     font-weight:300;
   }
 
+  a {
+    text-decoration: none;
+}
+
   .header-container nav ul li:hover {
     cursor: text;
    color: green;

@@ -6,9 +6,11 @@ import "./Shop.css";
 import Dropdown from "react-dropdown";
 import "react-dropdown/style.css";
 import Form from "react-bootstrap/Form";
+import Accordion from "react-bootstrap/Accordion";
 
 const Shop = () => {
   const [items, setItems] = useState([]);
+  const [allItems, setAllItems] = useState([]);
   useEffect(() => {
     console.log(items);
   }, [items]);
@@ -16,8 +18,20 @@ const Shop = () => {
   useEffect(() => {
     fetch(`http://localhost:3001/items/`)
       .then((response) => response.json())
-      .then((json) => setItems(json));
+      .then((json) => {
+        console.log('JSON RESULT', json)
+        setItems(json);
+        setAllItems([...json]);
+      });
   }, []);
+
+  const filter = (filterBy) => {
+    if (filterBy) {
+      setItems([...allItems].filter((x) => x.category === filterBy));
+    } else {
+      setItems(allItems);
+    }
+  };
 
   const options = [
     "Sort by",
@@ -40,25 +54,43 @@ const Shop = () => {
           <div>
             <h3 className="shopFilterTitle">Filter by</h3>
             <div className="shopCollectionContainer">
-              <button className="shopCollectionBtn">Collection</button>
-
               <div className="shopUlCollectionContainer">
-                <ul className="shopUlCollection">
-                  <NavLink className="shopCollectionList">All</NavLink>
-                  <NavLink className="shopCollectionList">Produce</NavLink>
-                  <NavLink className="shopCollectionList">Dairy & Eggs</NavLink>
-                  <NavLink className="shopCollectionList">
-                    Bread & Grains
-                  </NavLink>
-                  <NavLink className="shopCollectionList">
-                    Household Goods
-                  </NavLink>
-                </ul>
-              </div>
-
-              <button className="shopPriceBtn">Price</button>
-              <div>
-                <Form.Range />
+                <Accordion defaultActiveKey="0" alwaysOpen={true} flush={true}>
+                  <Accordion.Item eventKey="0">
+                    <Accordion.Header bsPrefix="shopAccordion">
+                      Collection
+                    </Accordion.Header>
+                    <Accordion.Body>
+                      <ul className="shopUlCollection">
+                        <NavLink className="shopCollectionList">
+                        <button onClick={() => filter()}>All</button>
+                        </NavLink>
+                        <NavLink className="shopCollectionList">
+                          <button onClick={() => filter("produce")}>Produce</button>
+                        </NavLink>
+                        <NavLink className="shopCollectionList">
+                          Dairy & Eggs
+                        </NavLink>
+                        <NavLink className="shopCollectionList">
+                          Bread & Grains
+                        </NavLink>
+                        <NavLink className="shopCollectionList">
+                          Household Goods
+                        </NavLink>
+                      </ul>
+                    </Accordion.Body>
+                  </Accordion.Item>
+                  <Accordion.Item eventKey="1">
+                    <Accordion.Header>Price</Accordion.Header>
+                    <Accordion.Body>
+                      <button className="shopPriceBtn"></button>
+                      <div>
+                        <Form.Range />
+                        <span>$9.99</span>
+                      </div>
+                    </Accordion.Body>
+                  </Accordion.Item>
+                </Accordion>
               </div>
             </div>
           </div>
@@ -68,7 +100,7 @@ const Shop = () => {
                 options={options}
                 value={defaultOption}
                 placeholder="Sort by"
-                className=""
+                className="shopDropdownControl"
               />
             </div>
 

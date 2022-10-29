@@ -4,22 +4,22 @@
   padding: 0;
 }
 
-.shopContainer{
+.shopContainer {
   background-color: white;
   padding: 5% 5%;
   width: 100%;
 }
 
-.shopweeklyDealsItems{
+.shopweeklyDealsItems {
   display: flex;
   flex-wrap: wrap;
 }
 
-.shopweeklyDealsItems img{
+.shopweeklyDealsItems img {
   background-color: white;
 }
 
-.shopCollectionContainer{
+.shopCollectionContainer {
   display: flex;
   flex-direction: column;
   width: 200px;
@@ -27,24 +27,27 @@
   border-top: 1px solid lightgrey;
 }
 
-.shopContainerItems{
+.shopContainerItems {
   display: flex;
 }
 
-.shopTitle{
+.shopTitle {
   text-align: center;
+  color: #2A6049;
+  font-weight: 00;
 }
 
-.shopParagraph{
+.shopParagraph {
   text-align: center;
   padding-bottom: 5%;
 }
 
-.shopFilterTitle{
+.shopFilterTitle {
   padding-bottom: 30px;
   text-align: left;
 }
-.shopCollectionBtn{
+
+.shopCollectionBtn {
   border: none;
   background-color: white;
   text-align: left;
@@ -52,32 +55,44 @@
   padding-bottom: 20px;
 }
 
-.shopUlCollection{
+.shopUlCollection {
   padding-left: 0;
   display: flex;
   flex-direction: column;
- }
-.shopCollectionList{
-  text-decoration: none;
-  color: black;
-
 }
- .shopPriceBtn{
+
+.shopAccordion button{
+  background-color: white !important;
+  color: black !important;
+  border:none !important;
+}
+
+.shopPriceBtn {
   border: none;
   background-color: white;
   text-align: left;
   padding-top: 20px;
   padding-bottom: 20px;
- }
+}
 
- .shopUlCollectionContainer{
+.shopUlCollectionContainer {
   width: 200px;
   border-bottom: 1px solid lightgrey;
- }
+}
 
- .shopSortByDropDown{
+.shopSortByDropDown {
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
+
+}
+
+.Dropdown-arrow-wrapper {
+  width: 150px;
   
- }
+}
+
+.shopDropdownControl{
+  margin-bottom: 5%;
+  margin-right: 5%;
+}
