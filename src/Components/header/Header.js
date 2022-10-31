@@ -24,7 +24,9 @@ const Header = () => {
           <NavLink className="active" to={"about"}>
             About
           </NavLink>
-          <NavLink className="active">Contact</NavLink>
+          <NavLink className="active" to={"contact"}>
+            Contact
+          </NavLink>
         </ul>
         <input className="inputSearch" placeholder="Search..." />
         <img className="searchIcon" src={search} alt="search Icon"></img>

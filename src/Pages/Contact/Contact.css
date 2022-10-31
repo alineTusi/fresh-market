@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.contactContainer{
+  width: 90%;
+  background-color: white;
+
+}
+
+.contactUs{
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  padding: 5% 10%;
+  border-bottom: 1px solid black;
+  justify-content: center;
+  margin: 0% 19%;
+}
+
+.contactUsH3{
+  text-align: center;
+}
+
+.contactUsParagraph{
+  text-align: center;
+}
+
+.contactInfo{
+  display: flex;
+  text-align: center;
+  justify-content: space-evenly;
+  padding: 5%;
+  margin: 0% 11%;
+}

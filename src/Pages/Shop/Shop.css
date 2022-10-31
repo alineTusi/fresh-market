@@ -96,3 +96,12 @@
   margin-bottom: 5%;
   margin-right: 5%;
 }
+
+.shopCollectionListBtn{
+  border: none;
+  background-color: white;
+}
+
+.shopCollectionListBtn:hover {
+  color: green;
+}

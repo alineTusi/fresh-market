@@ -19,7 +19,7 @@ const Shop = () => {
     fetch(`http://localhost:3001/items/`)
       .then((response) => response.json())
       .then((json) => {
-        console.log('JSON RESULT', json)
+        console.log("JSON RESULT", json);
         setItems(json);
         setAllItems([...json]);
       });
@@ -63,19 +63,27 @@ const Shop = () => {
                     <Accordion.Body>
                       <ul className="shopUlCollection">
                         <NavLink className="shopCollectionList">
-                        <button onClick={() => filter()}>All</button>
+                          <button className="shopCollectionListBtn" onClick={() => filter()}>All</button>
                         </NavLink>
                         <NavLink className="shopCollectionList">
-                          <button onClick={() => filter("produce")}>Produce</button>
+                          <button className="shopCollectionListBtn" onClick={() => filter("produce")}>
+                            Produce
+                          </button>
                         </NavLink>
                         <NavLink className="shopCollectionList">
-                          Dairy & Eggs
+                          <button className="shopCollectionListBtn" onClick={() => filter("dairy & eggs")}>
+                            Dairy & Eggs
+                          </button>
                         </NavLink>
                         <NavLink className="shopCollectionList">
-                          Bread & Grains
+                          <button className="shopCollectionListBtn" onClick={() => filter("bread & grains")}>
+                            Bread & Grains
+                          </button>
                         </NavLink>
                         <NavLink className="shopCollectionList">
-                          Household Goods
+                          <button className="shopCollectionListBtn" onClick={() => filter("household")}>
+                            Household Goods
+                          </button>
                         </NavLink>
                       </ul>
                     </Accordion.Body>
