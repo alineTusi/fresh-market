@@ -1,8 +1,11 @@
-import React, { useEffect, useState } from "react";
+// import React, { useEffect, useState } from "react";
 import Container from "react-bootstrap/Container";
 import "./Contact.css";
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import "leaflet/dist/leaflet.css";
 
 const Contact = () => {
+  const position = [51.505, -0.09];
   return (
     <Container>
       <div className="contactContainer">
@@ -35,39 +38,62 @@ const Contact = () => {
           </div>
         </div>
 
-        <div className="contactForm">
-          <form>
-            <label>
-              First Name *
-              <input type="text" name="firstName" required />
-            </label>
-            <label>
-              Last Name *
-              <input type="text" name="lastName" required />
-            </label>
-            <label>
-              Email *
-              <input type="email" name="email" required />
-            </label>
-            <label>
-              Subject
-              <input type="text" name="subject" />
-            </label>
-            <label>
-              Type your message here... *
-              <textarea
-                placeholder="Type your message here..."
-                name="message"
-                rows="10"
-                cols="100"
-              ></textarea>
-            </label>
-          </form>
-        </div>
+        <form>
+          <div className="contactForm">
 
-        <input type="submit" value="Submit" />
+            <div className="contactInput">
+              <label>First Name *</label>
+              <input  className="contactInput" type="text" name="firstName" required />
+            </div>
+            <div className="contactInput">
+              <label>Email *</label>
+              <input  className="contactInput" type="email" name="email" required />
+            </div>
+            <div className="contactInput">
+              <label>Last Name *</label>
+              <input  className="contactInput" type="text" name="lastName" required />
+            </div>
+            <div className="contactInput">
+              <label>Subject</label>
+              <input className="contactInput" type="text" name="subject" />
+            </div>
 
-        <div className="contactMapContainer"></div>
+            <div className="contactMessage">
+              <label>
+                Type your message here... *
+                <textarea
+                  placeholder="Type your message here..."
+                  name="message"
+                  rows="10"
+                  cols="80"
+                ></textarea>
+              </label>
+              <button>Submit</button>
+            </div>
+          </div>
+        </form>
+        <MapContainer
+          style={{
+            height: "400px",
+            width: "70%",
+            margin: "auto",
+            marginTop: "10em",
+            marginBottom: "4em",
+          }}
+          center={position}
+          zoom={13}
+          scrollWheelZoom={false}
+        >
+          <TileLayer
+            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          />
+          <Marker position={position}>
+            <Popup>
+              A pretty CSS3 popup. <br /> Easily customizable.
+            </Popup>
+          </Marker>
+        </MapContainer>
       </div>
     </Container>
   );
